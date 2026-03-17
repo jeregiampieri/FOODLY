@@ -1,5 +1,8 @@
+import { HeroStyle } from "./HeroStyle"
+
 export const Hero = () => {
     return (
-        <h1>a</h1>
+        <HeroStyle>
+        </HeroStyle>
     )
 }
