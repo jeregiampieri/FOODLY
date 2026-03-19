@@ -1,5 +1,4 @@
-import { Routes } from "react-router-dom"
-import { Hero } from "./assets/components/Hero/Hero"
+import { Routes } from "./assets/components/Routes/Routes"
 import { Layout } from "./assets/components/Layout/Layout"
 import { GlobalStyle } from "./assets/styles/GlobalStyle"
 
@@ -11,9 +10,7 @@ function App() {
     el useEffect para que en cada cambio del path, la aplicación navegue al usuario al comienzo
     automáticamente */}
     <Layout>
-      <Navbar></Navbar>
       <Routes></Routes>
-      <Footer></Footer>
     </Layout>
     </>
   )
