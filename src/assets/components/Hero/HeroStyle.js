@@ -55,7 +55,6 @@ export const LupaContainer = styled.div`
 
 export const BotonBuscar = styled(motion.button)`
     display: flex;
-    border: 2px solid #ffffff;
     background-color: black;
     color: white;
     width: 80px;
@@ -66,4 +65,5 @@ export const BotonBuscar = styled(motion.button)`
     border-radius: 8px;
     font-size: 15px;
     cursor: pointer;
+    border: none;
 `
