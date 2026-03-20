@@ -1,9 +1,12 @@
-import { HomeStyle } from "./HomeStyle";
-
-export const Home = ({children}) => {
+import {Hero} from "../../Hero/Hero.jsx"
+import {HomeStyle} from "./HomeStyle.js"
+export const Home = () => {
     return (
         <HomeStyle>
-            <h1>{children}</h1>
+            {/* El hero forma parte del HOME, es por eso que se lo agrega */}
+            <Hero>
+
+            </Hero>
         </HomeStyle>
 
     )
