@@ -9,13 +9,13 @@ export const Routes = () => {
             <ReactDomRoutes>
                 {/* Cada una de estas Route indica que cuando se lee el correspondiente path de la URL
                 renderice el correspondiente componente. Ejemplo: cuando lee el path /login, renderiza el componente Login */}
-                <Route path='/' element={<Home>Buenas</Home>}></Route>
-                <Route path='/login' element={<Login></Login>}></Route>
+                <Route path='/' element={<Home></Home>}></Route>
+                {/* <Route path='/login' element={<Login></Login>}></Route>
                 <Route path='/register' element={<Register></Register>}></Route>
                 <Route path='/mis-ordenes' element={<MisOrdenes></MisOrdenes>}></Route>
                 <Route path='/felicitaciones' element={<Felicitaciones></Felicitaciones>}></Route>
                 <Route path='/resumen/:orderId' element={<Resumen></Resumen>}></Route> 
-                <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
+                <Route path='*' element={<PageNotFound></PageNotFound>}></Route> */}
             </ReactDomRoutes>
     )
 }

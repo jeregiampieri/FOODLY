@@ -10,6 +10,11 @@ export const GlobalStyle = createGlobalStyle`
     --gray-bg: #2b2b2c;
     --btn-gradient: linear-gradient(83deg, #ffa100, #fb103d);
     --btn-gradient-secondary: linear-gradient(140deg, #3B3022, #3B2329);
+    /* Tipografias */
+    --font-poppins: 'Poppins', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+    --font-crimson: 'Crimson Text', serif;
+    --font-indie: 'Indie Flower', cursive;
 }
 
 /* Estilo usado para que el scroll sea smooth (más 'suave') */
@@ -20,11 +25,13 @@ html{
 body{
     margin: 0;
     padding: 0;
-    background-color: #131415;
-    color: white;
+    background-color: #fbfbfb;
+    color: black;
     /* Estilo muy bueno para que no se haga un recuadro cada vez que se hace click sobre botones, etc */
     -webkit-tap-highlight-color: transparent;
     overflow-x: hidden;
+    font-family: var(--font-roboto);
+    
 }
 
 a{
