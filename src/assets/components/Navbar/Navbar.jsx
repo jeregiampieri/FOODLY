@@ -37,7 +37,7 @@ export const Navbar = () => {
                         ease: "easeIn"
                     }
                 }}>
-                    <a>Inicio de Sesión</a>
+                    <a>Ingreso</a>
                     <FaUserCircle/>
                 </SesionBoton>
             </LinksContainer>

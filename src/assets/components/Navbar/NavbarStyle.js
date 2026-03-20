@@ -9,7 +9,7 @@ export const NavbarStyled = styled.nav`
     justify-content: space-between;
     align-items: center;
     height: 85px;
-    padding: 0rem 1rem 0rem 1rem;
+    padding: 0rem 0rem 0rem 1rem;
     border-bottom: 1px solid #aeaeae ;
 `
 export const ImgContainer = styled.div`
@@ -27,10 +27,10 @@ export const ImgContainer = styled.div`
 
 export const LinksContainer = styled.div`
     display: flex;
-    width: 30%;
+    width: 20%;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 5px;
 `
 
 export const HomeBoton = styled(motion.button)`
@@ -59,7 +59,7 @@ export const SesionBoton = styled(motion.div)`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
+    width: 100px;
     height: 40px;
     gap: 5px;
     font-size: 17.5px;
