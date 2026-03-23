@@ -14,18 +14,19 @@ export const CardRecomendacionContainer = styled(motion.div)`
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    padding: 0rem 1rem;
     width: 350px;
     height: 110px;
-    border: 2px solid black;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.55);
     cursor: pointer;
 `
 export const CardRecomendacionImgContainer = styled.div`
-    width: 100px;
-    height: 80px;
+    width: 85px;
+    height: 63px;
     border-radius: 10px;
     img{
-        width: 100px;
-        height: 80px;
+        width: 70px;
+        height: 65px;
     }
 `
 export const CardRecomendacionInfoContainer = styled.div`
@@ -39,4 +40,21 @@ export const CardRecomendacionInfoContainer = styled.div`
     h4{
         font-size: 19px;
     }
+    p{
+        color: #656565e0;
+    }
+`
+
+export const CardRecomendacionBoton = styled(motion.button)`
+    display: flex;
+    width: 80px;
+    height: 20px;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff7700;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 `

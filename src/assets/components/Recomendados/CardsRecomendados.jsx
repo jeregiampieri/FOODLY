@@ -1,5 +1,5 @@
 import { color } from "framer-motion"
-import { CardRecomendacionContainer, CardRecomendacionImgContainer, CardRecomendacionInfoContainer, CardsRecomendacionContainer } from "./CardsRecomendados"
+import { CardRecomendacionBoton, CardRecomendacionContainer, CardRecomendacionImgContainer, CardRecomendacionInfoContainer, CardsRecomendacionContainer } from "./CardsRecomendados"
 
 export const CardsRecomendados = () => {
     return (
@@ -11,8 +11,9 @@ export const CardsRecomendados = () => {
                 <CardRecomendacionInfoContainer>
                     <h4 style={{fontWeight: 500}}>La Aco</h4>
                     <p>Cheta la gorra</p>
-                    <h4 style={{color: '#ff7700', fontWeight: 500}}>$3000</h4>
+                    <h4 style={{color: '#ff7700', fontWeight: 800}}>$3000</h4>
                 </CardRecomendacionInfoContainer>
+                <CardRecomendacionBoton whileHover={{scale:1.05}}>Agregar</CardRecomendacionBoton>
             </CardRecomendacionContainer>
         </CardsRecomendacionContainer>
     )
