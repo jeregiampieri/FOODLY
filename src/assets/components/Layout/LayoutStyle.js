@@ -5,4 +5,5 @@ export const LayoutStyled = styled.div`
     height: auto;
     display: flex;
     flex-direction: column;
+    margin-bottom: 70px;
 `

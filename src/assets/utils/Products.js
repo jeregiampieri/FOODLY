@@ -258,14 +258,15 @@ export const products = [
   },
 ];
 
-export const TotalProducts = products.length;
+export const totalProductos = products.length
 
-export const Products = products.reduce((acc, product) => {
-  if (!acc[product.category]) {
-    acc[product.category] = [];
+// Función para separar a los productos por CATEGORIA
+export const Productos = products.reduce((acumulador, producto) => {
+  // Si la propiedad categoria del producto no existe como propiedad en el acumulador, entonces entra al if
+  if (!acumulador[producto.category]){
+    // Para esa propiedad del producto que llego (ejemplo Pizza), le asigno un array vacío
+    acumulador[producto.category] = []
   }
-
-  acc[product.category] = [...acc[product.category], product];
-
-  return acc;
-}, {});
+  // Si ya existe la categoría, entonces tomo todo el contenido de la propiedad (con el spread operator) y le sumo lo del producto que llego
+  acumulador[producto.category] = [...acumulador[producto.category], producto]
+}, {})

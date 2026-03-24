@@ -2,11 +2,11 @@ import { BordeDecoracion, CategoriaCard, CategoriaCardImgContainer } from "./Cat
 
 export const Categoria = ({img, title, category}) => {
     return (
-        <CategoriaCard>
+        <CategoriaCard whileTap={{scale:0.95}}>
             <CategoriaCardImgContainer>
                 <img src={img} alt={`Imagen de ${title}`} />
             </CategoriaCardImgContainer>
-            <h3>{title}</h3>
+            <h5>{title}</h5>
             <BordeDecoracion></BordeDecoracion>
         </CategoriaCard>
     )

@@ -21,7 +21,7 @@ export const Hero = () => {
                     </LupaContainer>
                     <input type="text" placeholder="Ej: Pizza a la piedra" />
                     <BotonBuscar whileHover={{
-                        boxShadow: "inset 0 0 0 50px #ff6600c5",
+                        boxShadow: "inset 0 0 0 50px #ff7700",
                         transition:{
                             duration:0.1,
                             ease:"easeIn"

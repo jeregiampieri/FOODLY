@@ -5,7 +5,7 @@ import { Categoria } from "./Categoria.jsx"
 export const Categorias = () => {
     return (
         <Container>
-            <h1>Categorias</h1>
+            <h1 style={{fontWeight:400}}>Categorias</h1>
             <CategoriasContainer>
             {
                 categorias.map((categoria) => {
