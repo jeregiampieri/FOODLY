@@ -29,8 +29,12 @@ export const ProductosImgContainer = styled.div`
         height: 100px;
     }
 `
-export const ProductosInfoContaineri = styled.div`
+export const ProductosInfoContainer = styled.div`
     display: flex;
     flex-direction: column;
+    gap: 10px;
+`
+export const ProductosButtomContainer = styled.div`
+    display: flex;
     gap: 10px;
 `
