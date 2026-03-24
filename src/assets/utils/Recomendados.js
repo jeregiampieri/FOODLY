@@ -1,3 +1,4 @@
+// Array de objetos con productos recomendados
 export const recomendados = [
   {
     id: 1,

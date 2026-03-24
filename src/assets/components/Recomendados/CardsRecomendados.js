@@ -7,6 +7,23 @@ import {motion} from "framer-motion"
 export const CardsRecomendacionContainer = styled.div`
     display: flex;
     gap: 20px;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    &::-webkit-scrollbar{
+        height: 4px;
+        width: 1px;
+    }
+    &::-webkit-scrollbar-track {
+        background: white; /* Un gris muy clarito o transparente */
+        border-radius: 10px; /* Bordes redondeados para que no sea tan tosca */
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #000000; /* Un gris un poco más oscuro para la barra en sí */
+        border-radius: 10px; /* Bordes redondeados también aquí */
+    }
 `
 export const CardRecomendacionContainer = styled(motion.div)`
     display: flex;
@@ -15,9 +32,11 @@ export const CardRecomendacionContainer = styled(motion.div)`
     align-items: center;
     border-radius: 5px;
     padding: 0rem 1rem;
-    width: 350px;
+    min-width: 350px;
     height: 110px;
-    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.55);
+    border-top: 1px solid #9a9a9a62;
+    border-left: 1px solid #9a9a9a62;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.35);
 `
 export const CardRecomendacionImgContainer = styled.div`
     width: 85px;

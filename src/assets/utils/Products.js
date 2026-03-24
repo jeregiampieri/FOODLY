@@ -1,3 +1,4 @@
+// Array de objetos con productos
 export const products = [
   {
     id: 1,
