@@ -18,7 +18,6 @@ export const CardRecomendacionContainer = styled(motion.div)`
     width: 350px;
     height: 110px;
     box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.55);
-    cursor: pointer;
 `
 export const CardRecomendacionImgContainer = styled.div`
     width: 85px;

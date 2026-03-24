@@ -1,20 +1,18 @@
 import { color } from "framer-motion"
 import { CardRecomendacionBoton, CardRecomendacionContainer, CardRecomendacionImgContainer, CardRecomendacionInfoContainer, CardsRecomendacionContainer } from "./CardsRecomendados"
+import {recomendados} from "../../utils/Recomendados.js"
+import { CardRecomendado } from "./CardRecomendado.jsx"
 
 export const CardsRecomendados = () => {
     return (
         <CardsRecomendacionContainer>
-            <CardRecomendacionContainer>
-                <CardRecomendacionImgContainer>
-                    <img src="https://res.cloudinary.com/dcatzxqqf/image/upload/v1656648456/coding/NucbaZappi/Productos/muzza-mentolada_fmh9at.png" alt="Imagen de pizza" />
-                </CardRecomendacionImgContainer>
-                <CardRecomendacionInfoContainer>
-                    <h4 style={{fontWeight: 500}}>La Aco</h4>
-                    <p>Cheta la gorra</p>
-                    <h4 style={{color: '#ff7700', fontWeight: 800}}>$3000</h4>
-                </CardRecomendacionInfoContainer>
-                <CardRecomendacionBoton whileHover={{scale:1.05}}>Agregar</CardRecomendacionBoton>
-            </CardRecomendacionContainer>
+                {/* Recordar que esto es un componente JSX, por lo tanto, para indicar que va haber código JS necesito colocar la lógica 
+                entre corchetes */}
+                {
+                    recomendados.map((productoRecomendado) => {
+                        return <CardRecomendado key={productoRecomendado.id} {...productoRecomendado}></CardRecomendado>
+                    })
+                }
         </CardsRecomendacionContainer>
     )
 }
