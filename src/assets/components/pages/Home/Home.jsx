@@ -1,5 +1,6 @@
 import { Categorias } from "../../Categorias/Categorias.jsx"
 import {Hero} from "../../Hero/Hero.jsx"
+import { Productos } from "../../Productos/Productos.jsx"
 import { CardsRecomendados } from "../../Recomendados/CardsRecomendados.jsx"
 import {HomeWrapped, RecomendadosWrapped} from "./HomeStyle.js"
 export const Home = () => {
@@ -13,6 +14,7 @@ export const Home = () => {
                 <CardsRecomendados></CardsRecomendados>
             </RecomendadosWrapped>
             <Categorias></Categorias>
+            <Productos></Productos>
         </HomeWrapped>
 
     )

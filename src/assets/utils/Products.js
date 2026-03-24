@@ -269,4 +269,7 @@ export const Productos = products.reduce((acumulador, producto) => {
   }
   // Si ya existe la categoría, entonces tomo todo el contenido de la propiedad (con el spread operator) y le sumo lo del producto que llego
   acumulador[producto.category] = [...acumulador[producto.category], producto]
+  // El resultado de esta función es un OBJETO donde cada propiedad es una categoria y la categoria a su vez es un array con los objetos
+  // pertenecientes a dicha categoria
+  return acumulador
 }, {})
