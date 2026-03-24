@@ -20,3 +20,12 @@ export const BordeDecoracion = styled.div`
     background-color: black;
     border-radius: 15px;
 `
+export const CategoriaCardImgContainer = styled.div`
+    display: flex;
+    height: 100px;
+    width: 100px;
+    img{
+        height: 40px;
+        width: 40px;
+    }
+`

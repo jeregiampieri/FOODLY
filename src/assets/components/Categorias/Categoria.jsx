@@ -1,5 +1,13 @@
-export const Categoria = () => {
+import { BordeDecoracion, CategoriaCard, CategoriaCardImgContainer } from "./CategoriasStyle"
+
+export const Categoria = ({img, title, category}) => {
     return (
-        <h1></h1>
+        <CategoriaCard>
+            <CategoriaCardImgContainer>
+                <img src={img} alt={`Imagen de ${title}`} />
+            </CategoriaCardImgContainer>
+            <h3>{title}</h3>
+            <BordeDecoracion></BordeDecoracion>
+        </CategoriaCard>
     )
 }
