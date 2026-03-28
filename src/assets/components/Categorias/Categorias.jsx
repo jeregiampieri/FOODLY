@@ -1,8 +1,14 @@
 import { CategoriaCard, CategoriasContainer, Container } from "./CategoriasStyle"
-import {categorias} from "../../utils/Categorias.js"
 import { Categoria } from "./Categoria.jsx"
+import { useSelector } from "react-redux"
 
 export const Categorias = () => {
+    
+    // Me estoy trayendo los datos del slice de categorias
+    const {categorias} = useSelector((estado) => {
+        return estado.categorias
+    })
+
     return (
         <Container>
             <h2 style={{fontWeight:400}}>Categorias</h2>
