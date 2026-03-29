@@ -1,14 +1,19 @@
 import { ProductosContainer, ProductosWrapped } from "./ProductoStyle"
-import { Productos as Products } from "../../utils/Products"
 import { Producto } from "./Producto"
+import { useSelector } from "react-redux"
 
 export const Productos = () => {
+
+    const {productos} = useSelector((estado) => {
+        return estado.productos
+    })
+
     return (
         <ProductosWrapped>
             <h2 style={{fontWeight:400}}>Productos</h2>
             <ProductosContainer>
                 {
-                    Object.entries(Products).map((array) => {
+                    Object.entries(productos).map((array) => {
                         return array[1].map((producto) => {
                             return <Producto key={producto.id} {...producto}></Producto>
                         })
