@@ -4,7 +4,7 @@ import { useSelector } from "react-redux"
 
 export const Productos = () => {
 
-    const {productos} = useSelector((estado) => {
+    const {productosPRUEBA} = useSelector((estado) => {
         return estado.productos
     })
 
@@ -13,7 +13,7 @@ export const Productos = () => {
             <h2 style={{fontWeight:400}}>Productos</h2>
             <ProductosContainer>
                 {
-                    Object.entries(productos).map((array) => {
+                    Object.entries(productosPRUEBA).map((array) => {
                         return array[1].map((producto) => {
                             return <Producto key={producto.id} {...producto}></Producto>
                         })

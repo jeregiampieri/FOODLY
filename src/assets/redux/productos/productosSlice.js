@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import {Productos, totalProductos} from "../../utils/Products.js"
 
 const ESTADO_INICIAL = {
-    productos: Productos,
+    productosPRUEBA: Productos,
     // Esto sirve para realizar la PAGINACIÓN
     totalProductos: totalProductos
 }
