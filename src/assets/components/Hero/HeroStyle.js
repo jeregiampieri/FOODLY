@@ -36,7 +36,10 @@ export const BuscarContainer = styled.div`
     justify-content: center;
     align-items: center;
     height: 50px;
-    gap: 50px;
+    form {
+        display: flex;
+        gap: 25px
+    }
 `
 export const InputBuscar = styled(motion.input)`
     background-color: #f0f0f0b4;

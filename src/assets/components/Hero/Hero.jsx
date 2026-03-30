@@ -23,6 +23,7 @@ export const Hero = () => {
                     <LupaContainer>
                         <BiSearchAlt />
                     </LupaContainer>
+                    <form>
                     <InputBuscar type="text" placeholder="Ej: Pizza a la piedra" 
                     // Acá estoy capturando el valor del input y lo coloco dentro del valor del useState
                     onChange={(e) => {setValor(e.target.value)}}
@@ -36,6 +37,7 @@ export const Hero = () => {
                     }}>
                         Buscar
                     </BotonBuscar>
+                    </form>
                 </BuscarContainer>
             </BusquedaContainer>
             <ImgContainer>
