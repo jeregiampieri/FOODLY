@@ -37,15 +37,15 @@ export const BuscarContainer = styled.div`
     align-items: center;
     height: 50px;
     gap: 50px;
-    input{
-        background-color: #f0f0f0b4;
-        border: 2px solid black;
-        width: 280px;
-        height: 30px;
-        border-radius: 5px;
-        font-size: 15px;
-        padding: 3.5px 30px;
-    }
+`
+export const InputBuscar = styled(motion.input)`
+    background-color: #f0f0f0b4;
+    border: 2px solid black;
+    width: 280px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 3.5px 30px;
 `
 export const LupaContainer = styled.div`
     position: absolute;

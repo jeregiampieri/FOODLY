@@ -1,10 +1,14 @@
-import { BotonBuscar, BuscarContainer, BusquedaContainer, HeroStyle, ImgContainer, LupaContainer} from "./HeroStyle"
+import { BotonBuscar, BuscarContainer, BusquedaContainer, HeroStyle, ImgContainer, InputBuscar, LupaContainer} from "./HeroStyle"
 import pizzaImg from "../../img/pizzasImg.png"
 import { BiSearchAlt } from "react-icons/bi";
 import {Typewriter} from "react-simple-typewriter"
+import { useState } from "react";
 
 // Dentro del home, voy a colocar/importar el hero, ya que va a formar parte del mismo
 export const Hero = () => {
+
+    const [valor, setValor] = useState("")
+
     return (
         <HeroStyle>
             <BusquedaContainer>
@@ -19,7 +23,10 @@ export const Hero = () => {
                     <LupaContainer>
                         <BiSearchAlt />
                     </LupaContainer>
-                    <input type="text" placeholder="Ej: Pizza a la piedra" />
+                    <InputBuscar type="text" placeholder="Ej: Pizza a la piedra" 
+                    // Acá estoy capturando el valor del input y lo coloco dentro del valor del useState
+                    onChange={(e) => {setValor(e.target.value)}}
+                    value={valor} />
                     <BotonBuscar whileHover={{
                         boxShadow: "inset 0 0 0 50px #ff7700",
                         transition:{
