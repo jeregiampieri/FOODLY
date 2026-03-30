@@ -275,9 +275,9 @@ export const Productos = products.reduce((acumulador, producto) => {
 }, {})
 
 export const obtenerRecomendados = () => {
-  const cantidad = 4
+  const cantidad = 5
   return [...products].sort(() => {
-    Math.random() - 0.5
+    return Math.random() - 0.5
     // slice no inlcuye la posición final, es decir, cantidad = 4, NO lo incluye
   }).slice(0,cantidad)
 }

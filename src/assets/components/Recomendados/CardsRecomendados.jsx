@@ -1,8 +1,14 @@
 import { CardsRecomendacionContainer } from "./CardsRecomendados"
-import {recomendados} from "../../utils/Recomendados.js"
 import { CardRecomendado } from "./CardRecomendado.jsx"
+import { useSelector } from "react-redux"
+
 
 export const CardsRecomendados = () => {
+
+    const {recomendados} = useSelector((estado) => {
+        return estado.recomendados
+    })
+
     return (
         <CardsRecomendacionContainer>
                 {

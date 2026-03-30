@@ -32,7 +32,7 @@ export const CardRecomendacionContainer = styled(motion.div)`
     align-items: center;
     border-radius: 5px;
     padding: 0rem 1rem;
-    min-width: 350px;
+    min-width: 395px;
     height: 110px;
     border-top: 1px solid #9a9a9a62;
     border-left: 1px solid #9a9a9a62;

@@ -4,12 +4,14 @@ import storage from "redux-persist/lib/storage"
 import persistStore from "redux-persist/lib/persistStore"
 import categoriasReducer from "./categorias/categoriasSlice"
 import productosReducer from "./productos/productosSlice"
+import recomendadosReducer from "./recomendados/recomendadosSlice"
 
 // Acá voy a combinar todos los reducers, es decir, todos los slices que utilice para tenerlos en un solo lugar
 // Combinación de los REDUCERS
 const reducers = combineReducers({
     categorias: categoriasReducer,
     productos: productosReducer,
+    recomendados: recomendadosReducer
     // Prueba de funcionalidad
     // juanito: () => "hola"
 })

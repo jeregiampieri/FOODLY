@@ -16,3 +16,7 @@ export const recomendadosSlice = createSlice({
 })
 
 export const {randomRecomendado} = recomendadosSlice.actions
+
+// Recordar que con el export default puedo exportar con cualquier nombre (en el caso donde lo coloco en el store.js dentro del combineReducer)
+// le estoy colocando como nombre recomendadosReducer
+export default recomendadosSlice.reducer
