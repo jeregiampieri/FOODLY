@@ -273,3 +273,11 @@ export const Productos = products.reduce((acumulador, producto) => {
   // pertenecientes a dicha categoria
   return acumulador
 }, {})
+
+export const obtenerRecomendados = () => {
+  const cantidad = 4
+  return [...products].sort(() => {
+    Math.random() - 0.5
+    // slice no inlcuye la posición final, es decir, cantidad = 4, NO lo incluye
+  }).slice(0,cantidad)
+}

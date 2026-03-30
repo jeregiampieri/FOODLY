@@ -13,6 +13,7 @@ export const Productos = () => {
             <h2 style={{fontWeight:400}}>Productos</h2>
             <ProductosContainer>
                 {
+                    //Object.entries me crea un array por cada relación propiedad:valor
                     Object.entries(productosPRUEBA).map((array) => {
                         return array[1].map((producto) => {
                             return <Producto key={producto.id} {...producto}></Producto>
