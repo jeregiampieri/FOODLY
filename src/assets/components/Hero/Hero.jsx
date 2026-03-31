@@ -2,7 +2,7 @@ import { BotonBuscar, BuscarContainer, BusquedaContainer, HeroStyle, ImgContaine
 import pizzaImg from "../../img/pizzasImg.png"
 import { BiSearchAlt } from "react-icons/bi";
 import {Typewriter} from "react-simple-typewriter"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { seleccionarCategoria } from "../../redux/categorias/categoriasSlice";
 

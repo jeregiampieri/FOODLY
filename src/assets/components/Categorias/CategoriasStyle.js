@@ -32,11 +32,15 @@ export const CategoriaCard = styled(motion.div)`
     min-height: 130px;
     max-width: 110px;
     max-height: 130px;
-    border: 2px solid black;
+    border: 2px solid ${({selected}) => selected ? `#ff7700` : `black`};
     border-radius: 5px;
     padding: 1rem;
     transition: all 0.28s ease;
     cursor: pointer;
+    ${BordeDecoracion}{
+        background-image: ${({selected}) => selected ? `linear-gradient(83deg, #ffa100, #fb103d);` : `#ff7700`};
+        width: ${({selected}) => selected ? `35%` : `30%` }
+    }
     &:hover{
         border: 2px solid #ff7700;
         ${BordeDecoracion}{

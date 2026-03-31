@@ -1,17 +1,17 @@
-import { useState } from "react"
 import { BordeDecoracion, CategoriaCard, CategoriaCardImgContainer } from "./CategoriasStyle"
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch, useSelector} from "react-redux"
 import { seleccionarCategoria } from "../../redux/categorias/categoriasSlice"
 
 export const Categoria = ({img, title, category}) => {
-
-    const dispatch = useDispatch()
+     // Pensar en que si cambio la categoriaSeleccionada, el renderizado de los productos se hace AUTOMATICAMENTE, ya que en ese componente
+    // hice que los productos se rendericen en base a la categoriaSeleccionada
+    // Acá me traigo si o si del estado global categoriaSeleccionada para poder hacer el selected
     const {categoriaSeleccionada} = useSelector((estado) => estado.categorias)
-    console.log("hola")
-
+    const dispatch = useDispatch()
     return (
         <CategoriaCard whileTap={{scale:0.95}}
-        onClick={dispatch(seleccionarCategoria(category))}>
+        onClick={() => dispatch(seleccionarCategoria(category))}
+        selected={category === categoriaSeleccionada}>
             <CategoriaCardImgContainer>
                 <img src={img} alt={`Imagen de ${title}`} />
             </CategoriaCardImgContainer>
