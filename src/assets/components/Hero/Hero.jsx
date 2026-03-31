@@ -28,13 +28,12 @@ export const Hero = () => {
                     // Acá estoy capturando el valor del input y lo coloco dentro del valor del useState
                     onChange={(e) => {setValor(e.target.value)}}
                     value={valor} />
-                    <BotonBuscar whileHover={{
+                    <BotonBuscar whileHover={valor ? {
                         boxShadow: "inset 0 0 0 50px #ff7700",
                         transition:{
                             duration:0.1,
                             ease:"easeIn"
-                        }
-                    }}>
+                        }}:{}} disabled={!valor}>
                         Buscar
                     </BotonBuscar>
                     </form>

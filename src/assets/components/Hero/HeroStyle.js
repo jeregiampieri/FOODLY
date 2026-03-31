@@ -69,4 +69,8 @@ export const BotonBuscar = styled(motion.button)`
     font-size: 15px;
     cursor: pointer;
     border: none;
+    &:disabled{
+        cursor: not-allowed;
+        background-color: gray;
+    }
 `
