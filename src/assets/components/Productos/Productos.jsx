@@ -1,6 +1,7 @@
-import { ProductosContainer, ProductosWrapped } from "./ProductoStyle"
+import { BotonesContainer, BotonesProductos, ProductosContainer, ProductosWrapped } from "./ProductoStyle"
 import { Producto } from "./Producto"
 import { useSelector } from "react-redux"
+import { seleccionarCategoria } from "../../redux/categorias/categoriasSlice"
 
 export const Productos = () => {
 
@@ -13,7 +14,7 @@ export const Productos = () => {
 
     return (
         <ProductosWrapped>
-            <h2 style={{fontWeight:400}}>Productos</h2>
+            <h2 style={{fontWeight:400, alignSelf:"flex-start"}}>Productos</h2>
             <ProductosContainer>
                 {
                     //Object.entries me crea un array por cada relación propiedad:valor
@@ -32,6 +33,10 @@ export const Productos = () => {
                     })
                 }
               </ProductosContainer>
+              <BotonesContainer>
+                <BotonesProductos disabled={categoriaSeleccionada}>-</BotonesProductos>
+                <BotonesProductos disabled={categoriaSeleccionada}>+</BotonesProductos>
+              </BotonesContainer>
         </ProductosWrapped>
     )
 }

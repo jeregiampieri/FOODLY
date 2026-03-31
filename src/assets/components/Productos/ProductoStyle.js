@@ -6,6 +6,8 @@ export const ProductosWrapped = styled.div`
     flex-direction: column;
     gap: 5px;
     width: 80%;
+    justify-content: center;
+    align-items: center;
 `
 export const ProductosContainer = styled.div`
     display: flex;
@@ -73,5 +75,33 @@ export const ProductosBotonAgregar = styled(motion.button)`
     transition: all 0.2s ease;
     &:hover{
         background-color:#ff7700;
+    }
+`
+export const BotonesContainer = styled.div`
+    display: flex;
+    gap: 40px;
+    margin-top: 27px;
+`
+
+export const BotonesProductos = styled(motion.button)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    background-color: #ff7700;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.2s ease;
+    border: #ff7700;
+    font-size: 17px;
+    &:hover{
+        transform: scale(1.05);
+    }
+    &:disabled{
+        display: none;
     }
 `
