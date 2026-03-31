@@ -7,6 +7,7 @@ export const Categoria = ({img, title, category}) => {
 
     const dispatch = useDispatch()
     const {categoriaSeleccionada} = useSelector((estado) => estado.categorias)
+    console.log("hola")
 
     return (
         <CategoriaCard whileTap={{scale:0.95}}
