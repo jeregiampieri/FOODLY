@@ -3,11 +3,23 @@ import pizzaImg from "../../img/pizzasImg.png"
 import { BiSearchAlt } from "react-icons/bi";
 import {Typewriter} from "react-simple-typewriter"
 import { useState } from "react";
+import { useSelector } from "react-redux";
+
 
 // Dentro del home, voy a colocar/importar el hero, ya que va a formar parte del mismo
 export const Hero = () => {
 
     const [valor, setValor] = useState("")
+    const {categorias} = useSelector((estado) => {
+            return estado.categorias
+        })
+    console.log("Categorias:", categorias)
+    const handlerSubmit = (evento) =>{
+        evento.preventDefault();
+        console.log("valor:", valor)
+        // Para limpiar la data que viene del input
+        // const nuevaCategoria = valor.trim().toLowerCase().split(" ").join("")
+    }
 
     return (
         <HeroStyle>
@@ -33,7 +45,8 @@ export const Hero = () => {
                         transition:{
                             duration:0.1,
                             ease:"easeIn"
-                        }}:{}} disabled={!valor}>
+                        }}:{}} disabled={!valor}
+                        onClick={(evento) => handlerSubmit(evento)}>
                         Buscar
                     </BotonBuscar>
                     </form>
