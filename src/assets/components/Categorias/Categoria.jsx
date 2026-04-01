@@ -2,6 +2,7 @@ import { BordeDecoracion, CategoriaCard, CategoriaCardImgContainer } from "./Cat
 import { useDispatch, useSelector} from "react-redux"
 import { seleccionarCategoria } from "../../redux/categorias/categoriasSlice"
 
+// Este componente me representa a cada una de las categorias, es decir, cada una de las cards
 export const Categoria = ({img, title, category}) => {
      // Pensar en que si cambio la categoriaSeleccionada, el renderizado de los productos se hace AUTOMATICAMENTE, ya que en ese componente
     // hice que los productos se rendericen en base a la categoriaSeleccionada

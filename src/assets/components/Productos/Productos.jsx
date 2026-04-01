@@ -2,6 +2,7 @@ import { BotonesContainer, BotonesProductos, ProductosContainer, ProductosWrappe
 import { Producto } from "./Producto"
 import { useSelector } from "react-redux"
 import { seleccionarCategoria } from "../../redux/categorias/categoriasSlice"
+import { useState } from "react"
 
 export const Productos = () => {
 
@@ -11,6 +12,8 @@ export const Productos = () => {
 
     // Me traigo la categoriaSeleccionada en el estado global
     const {categoriaSeleccionada} = useSelector((estado) => estado.categorias)
+
+    const [cantidadProductos , setCantidadProductos] = useState()
 
     return (
         <ProductosWrapped>

@@ -2,6 +2,7 @@ import { CategoriaCard, CategoriasContainer, Container } from "./CategoriasStyle
 import { Categoria } from "./Categoria.jsx"
 import { useSelector } from "react-redux"
 
+// Este componente me representa al conjunto de categorias
 export const Categorias = () => {
     
     // Me estoy trayendo los datos del slice de categorias
