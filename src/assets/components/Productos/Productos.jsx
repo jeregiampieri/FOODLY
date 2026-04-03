@@ -40,14 +40,13 @@ export const Productos = () => {
                             })
                     )
                 }{
-                    
                 }
               </ProductosContainer>
               <BotonesContainer>
                 <BotonesProductos disabled={categoriaSeleccionada || cantidadProductosInf === 0}
                 onClick={() => {setCantidadProductosSup(cantidadProductosSup - 8)
                                 setCantidadProductosInf(cantidadProductosInf - 8)}}>-</BotonesProductos>
-                <BotonesProductos disabled={categoriaSeleccionada || cantidadProductosSup === 32}
+                <BotonesProductos disabled={categoriaSeleccionada || cantidadProductosSup >= totalProductos}
                 onClick={() => {setCantidadProductosSup(cantidadProductosSup + 8)
                                 setCantidadProductosInf(cantidadProductosInf +8)}}>+</BotonesProductos>
               </BotonesContainer>
