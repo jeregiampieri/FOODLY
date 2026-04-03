@@ -17,7 +17,8 @@ export const Productos = () => {
     // Me traigo la categoriaSeleccionada en el estado global
     const {categoriaSeleccionada} = useSelector((estado) => estado.categorias)
 
-    const [cantidadProductos , setCantidadProductos] = useState(0)
+    const [cantidadProductosSup , setCantidadProductosSup] = useState(8)
+    const [cantidadProductosInf , setCantidadProductosInf] = useState(0)
 
     return (
         <ProductosWrapped>
@@ -34,15 +35,21 @@ export const Productos = () => {
                             }
                             return null
                     })) : (
-                        products.slice(0,8).map((producto) => {
+                        products.slice(cantidadProductosInf,cantidadProductosSup).map((producto) => {
                                 return <Producto key={producto.id} {...producto}></Producto>
                             })
                     )
+                }{
+                    
                 }
               </ProductosContainer>
               <BotonesContainer>
-                <BotonesProductos disabled={categoriaSeleccionada}>-</BotonesProductos>
-                <BotonesProductos disabled={categoriaSeleccionada}>+</BotonesProductos>
+                <BotonesProductos disabled={categoriaSeleccionada || cantidadProductosInf === 0}
+                onClick={() => {setCantidadProductosSup(cantidadProductosSup - 8)
+                                setCantidadProductosInf(cantidadProductosInf - 8)}}>-</BotonesProductos>
+                <BotonesProductos disabled={categoriaSeleccionada || cantidadProductosSup === 32}
+                onClick={() => {setCantidadProductosSup(cantidadProductosSup + 8)
+                                setCantidadProductosInf(cantidadProductosInf +8)}}>+</BotonesProductos>
               </BotonesContainer>
         </ProductosWrapped>
     )

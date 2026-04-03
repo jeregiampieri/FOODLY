@@ -102,6 +102,7 @@ export const BotonesProductos = styled(motion.button)`
         transform: scale(1.05);
     }
     &:disabled{
-        display: none;
+        background-color: gray;
+        cursor: not-allowed;
     }
 `
