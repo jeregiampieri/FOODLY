@@ -1,7 +1,7 @@
 import { BotonesContainer, BotonesProductos, ProductosContainer, ProductosWrapped } from "./ProductoStyle"
 import { Producto } from "./Producto"
 import { useSelector } from "react-redux"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { products } from "../../utils/Products"
 
 export const Productos = () => {
@@ -19,6 +19,12 @@ export const Productos = () => {
 
     const [cantidadProductosSup , setCantidadProductosSup] = useState(8)
     const [cantidadProductosInf , setCantidadProductosInf] = useState(0)
+
+    // Para actualizar los limites del paginado cada vez que hay un cambio en la categoriaSeleccionada
+    useEffect(() =>{
+        setCantidadProductosSup(8)
+        setCantidadProductosInf(0)
+    },[categoriaSeleccionada])
 
     return (
         <ProductosWrapped>
