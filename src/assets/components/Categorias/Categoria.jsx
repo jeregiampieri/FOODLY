@@ -9,6 +9,7 @@ export const Categoria = ({img, title, category}) => {
     // Acá me traigo si o si del estado global categoriaSeleccionada para poder hacer el selected
     const {categoriaSeleccionada} = useSelector((estado) => estado.categorias)
     const dispatch = useDispatch()
+    
     return (
         <CategoriaCard whileTap={{scale:0.95}}
         onClick={() => dispatch(seleccionarCategoria(category))}
